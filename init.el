@@ -596,6 +596,7 @@ before packages are loaded."
   (require 'init-keymap)
   (require 'init-sis)
   (require 'init-org)
+  (require 'init-config)
   (if (eq system-type 'darwin)
       (require 'init-osx-clipboard))
   (when (file-exists-p custom-file)
