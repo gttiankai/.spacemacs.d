@@ -66,6 +66,7 @@ This function should only modify configuration layer settings."
      ;; syntax-checking
      ;; version-control
      treemacs
+     cmake
      ;; config language
      (c-c++ :variables
             c-c++-adopt-subprojects t
