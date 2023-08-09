@@ -48,14 +48,14 @@ This function should only modify configuration layer settings."
                       auto-completion-private-snippets-directory nil
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-enable-help-tooltip t
-                      auto-completion-use-company-box nil
+                      auto-completion-use-company-box t
                       auto-completion-enable-sort-by-usage t
                       )
      ;; better-defaults
      emacs-lisp
      ;; git
      helm
-     ;; lsp
+     lsp
      ;; markdown
      multiple-cursors
      ;; org
@@ -77,6 +77,8 @@ This function should only modify configuration layer settings."
             c-c++-enable-auto-newline nil
             c-c++-enable-google-newline nil
             )
+     (python)
+     (shell-scripts)
      )
 
 
@@ -261,7 +263,8 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(doom-dracula
+                         spacemacs-dark
                          spacemacs-light)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
