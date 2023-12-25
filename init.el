@@ -58,7 +58,7 @@ This function should only modify configuration layer settings."
      lsp
      ;; markdown
      multiple-cursors
-     ;; org
+     org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -78,7 +78,7 @@ This function should only modify configuration layer settings."
             c-c++-enable-google-newline nil
             )
      (python)
-     (shell-scripts)
+     (shell-scripts :variables shell-scripts-backend 'lsp)
      )
 
 
@@ -283,8 +283,9 @@ It should only modify the values of Spacemacs settings."
    ;; Default font or prioritized list of fonts. The `:size' can be specified as
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 10.0
+   ;; Source Code Pro
+   dotspacemacs-default-font '("Inconsolata"
+                               :size 23.8
                                :weight normal
                                :width normal)
 
