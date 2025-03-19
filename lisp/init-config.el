@@ -11,7 +11,9 @@
 
 ;; alias jk = escape
 (setq-default evil-escape-key-sequence "jk")
-
-
+;; set tab width 4
+(setq-default c-basic-offset 4)
+(setq-default tab-width 4)
+;; 用空格替代 Tab
+(setq-default indent-tabs-mode nil)
 (provide 'init-config)
-

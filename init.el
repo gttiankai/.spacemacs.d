@@ -73,9 +73,10 @@ This function should only modify configuration layer settings."
             c-c++-backend 'lsp-clangd
             c-c++-lsp-enable-semantic-highlight 'rainbow
             c-c++-default-mode-for-headers 'c++-mode
-            c-c++-enable-google-style t
+            c-c++-enable-google-style nil
             c-c++-enable-auto-newline nil
             c-c++-enable-google-newline nil
+            c-c++-enable-organize-includes-on-save t
             )
      (python)
      (shell-scripts :variables shell-scripts-backend 'lsp)
@@ -263,8 +264,8 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(doom-dracula
-                         spacemacs-dark
+   dotspacemacs-themes '(spacemacs-dark
+                         doom-dracula
                          spacemacs-light)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
@@ -283,7 +284,7 @@ It should only modify the values of Spacemacs settings."
    ;; Default font or prioritized list of fonts. The `:size' can be specified as
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
-   ;; Source Code Pro
+   ;; "Source Code Pro"
    dotspacemacs-default-font '("Inconsolata"
                                :size 23.8
                                :weight normal
@@ -571,7 +572,7 @@ default it calls `spacemacs/load-spacemacs-env' which loads the environment
 variables declared in `~/.spacemacs.env' or `~/.spacemacs.d/.spacemacs.env'.
 See the header of this file for more information."
   (spacemacs/load-spacemacs-env)
-)
+  )
 
 (defun dotspacemacs/user-init ()
   "Initialization for user code:
@@ -580,7 +581,7 @@ configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq custom-file "~/.spacemacs.d/cache/custom.el")
-)
+  )
 
 
 (defun dotspacemacs/user-load ()
@@ -588,7 +589,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 This function is called only while dumping Spacemacs configuration. You can
 `require' or `load' the libraries of your choice that will be included in the
 dump."
-)
+  )
 
 
 (defun dotspacemacs/user-config ()
@@ -606,7 +607,7 @@ before packages are loaded."
       (require 'init-osx-clipboard))
   (when (file-exists-p custom-file)
     (load-file custom-file))
-)
+  )
 
 
 ;; Do not write anything past this comment. This is where Emacs will
