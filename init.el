@@ -76,7 +76,7 @@ This function should only modify configuration layer settings."
             c-c++-enable-google-style nil
             c-c++-enable-auto-newline nil
             c-c++-enable-google-newline nil
-            c-c++-enable-organize-includes-on-save t
+            c-c++-enable-organize-includes-on-save nil
             )
      (python)
      (shell-scripts :variables shell-scripts-backend 'lsp)
@@ -264,7 +264,8 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(doom-one
+                         spacemacs-dark
                          doom-dracula
                          spacemacs-light)
 
