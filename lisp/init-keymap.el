@@ -1,12 +1,12 @@
-(global-set-key (kbd "C-c f") 'helm-for-files)
+;; (global-set-key (kbd "C-c f") 'helm-for-files)
 
-(global-set-key (kbd "C-c i") 'helm-imenu)
+;; (global-set-key (kbd "C-c i") 'helm-imenu)
 
-(global-set-key (kbd "C-x C-f") 'ido-find-file)
+;; (global-set-key (kbd "C-x C-f") 'ido-find-file)
 
-(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+;; (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 
-(global-set-key (kbd "C-x f") nil)
+;; (global-set-key (kbd "C-x f") nil)
 
 ;; 使用f8快捷键删除行末多余的空格
 (global-set-key [f8] 'delete-trailing-whitespace)

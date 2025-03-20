@@ -54,7 +54,8 @@ This function should only modify configuration layer settings."
      ;; better-defaults
      emacs-lisp
      ;; git
-     helm
+     ;; ivy and helm have the same function, you should only use one of them
+     ivy
      lsp
      ;; markdown
      multiple-cursors
