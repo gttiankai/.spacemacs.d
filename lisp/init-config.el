@@ -16,4 +16,9 @@
 (setq-default tab-width 4)
 ;; 用空格替代 Tab
 (setq-default indent-tabs-mode nil)
+;; set fill-column to 120
+(setq-default fill-column 120)
+(setq fill-column 120)
+;; 全局启用垂直参考线
+(global-display-fill-column-indicator-mode t)
 (provide 'init-config)
