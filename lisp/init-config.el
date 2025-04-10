@@ -20,5 +20,7 @@
 ;; (setq-default fill-column 120)
 ;; (setq fill-column 120)
 ;; 全局启用垂直参考线
-(global-display-fill-column-indicator-mode t)
+;; (global-display-fill-column-indicator-mode t)
+;; 编程模型下开启
+(add-hook 'prog-mode-hook 'display-fill-column-indicator-mode)
 (provide 'init-config)
